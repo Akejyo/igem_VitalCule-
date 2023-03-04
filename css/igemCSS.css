@@ -182,6 +182,7 @@ nav ul li:nth-child(5):hover~.nav-box {
 
 .abstract {
     /*和body_box搭配*/
+    font-family: "IBM Plex Sans Roman", Times;
     justify-content: center !important;
     align-items: flex-start !important;
     padding-top: 3rem;
@@ -191,11 +192,12 @@ nav ul li:nth-child(5):hover~.nav-box {
 }
 
 .abstract_box {
+    font-variation-settings: 'wght' 300, 'wdth' 85;
     height: 100%;
     width: 90%;
     padding: 40px;
     box-sizing: border-box;
-    background: #0ac551;
+    background: #4fda84;
     border-radius: 5px;
     color: #ffffff;
 }
@@ -234,6 +236,19 @@ nav ul li:nth-child(5):hover~.nav-box {
 
 .body_box .h11 {
     color: rgb(159, 159, 159);
+}
+
+.body_box .floatImg {
+    float: left;
+}
+
+.body_box .blockImg {
+    justify-content: center;
+    align-items: center;
+}
+
+.body_box .blockImg image {
+    display: block;
 }
 
 .aside {
