@@ -1,0 +1,349 @@
+* {
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: "IBM Plex Sans Roman";
+    src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/85648/IBMPlexSansVar-Roman.ttf");
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    background-size: auto;
+}
+
+.shell {
+    height: 100%;
+    overflow-x: hidden;
+    perspective: 3px;
+}
+
+.shell div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: 30px;
+    letter-spacing: 2px;
+}
+
+nav {
+    height: 0;
+    top: 0;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: right;
+    width: 90px;
+    text-align: center;
+}
+
+
+/*导航栏的字体*/
+
+nav ul li a {
+    color: #fff;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 70px;
+}
+
+.nav-box {
+    position: absolute;
+    left: 0;
+    width: 90px;
+    height: 7px;
+    border-radius: 2px;
+    transition: 0.5s;
+}
+
+nav ul li:nth-child(2):hover~.nav-box {
+    left: calc(100% - 180px);
+    background-color: #fff
+}
+
+nav ul li:nth-child(3):hover~.nav-box {
+    left: calc(100% - 270px);
+    background-color: #fff
+}
+
+nav ul li:nth-child(4):hover~.nav-box {
+    left: calc(100% - 360px);
+    background-color: #fff
+}
+
+nav ul li:nth-child(5):hover~.nav-box {
+    left: calc(100% - 450px);
+    background-color: #fff
+}
+
+.main {
+    padding: 2rem;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    background: #fff;
+    width: 100%;
+    overflow-wrap: break-word;
+    margin: 2.5rem;
+    border-radius: 10px;
+}
+
+.main p {
+    line-height: 3em;
+}
+
+.title {
+    display: flex;
+    font-family: "IBM Plex Sans Roman", Times;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 40vh;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+}
+
+.title::after {
+    /*降低图片的亮度*/
+    content: "";
+    position: absolute;
+    z-index: -20;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, .5);
+}
+
+
+/*炫酷的呼吸title*/
+
+.title h1 {
+    font-weight: 100;
+    font-size: 10vw;
+    line-height: 10vw;
+    font-variation-settings: 'wght' 100, 'wdth' 85;
+    color: #fff;
+}
+
+.title h1 .char {
+    --delay: calc((var(--char-index) + 1) * 400ms);
+    animation: breathe 4000ms infinite both;
+    animation-delay: var(--delay);
+}
+
+@keyframes breathe {
+    0% {
+        font-variation-settings: 'wght' 100, 'wdth' 85;
+        font-size: 10vw;
+    }
+    60% {
+        font-variation-settings: 'wght' 700, 'wdth' 100;
+        font-size: 11vw;
+    }
+    100% {
+        font-variation-settings: 'wght' 100, 'wdth' 85;
+        font-size: 10vw;
+    }
+}
+
+.mid_shell {
+    /*和body_box搭配*/
+    display: block !important;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    height: auto;
+    background-color: #ffffff;
+}
+
+.cardBox {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.card {
+    display: flex !important;
+    position: relative;
+    width: 320px;
+    height: 190px;
+    /* height: 450px; */
+    background: #fff;
+    border-radius: 20px;
+    margin: 1rem;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+    transition: 0.5s;
+}
+
+.card:hover {
+    height: 450px;
+}
+
+.imgBx {
+    position: absolute !important;
+    left: 50%;
+    top: -50px;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.card:hover .imgBx {
+    width: 250px;
+    height: 250px;
+}
+
+.imgBx img {
+    position: absolute!important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .content {
+    position: absolute!important;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.card .content .details {
+    display: block !important;
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    transition: 0.5s;
+    transform: translateY(160px);
+}
+
+.card:hover .content .details {
+    transform: translateY(0px);
+}
+
+.card .content .details h2 {
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #555;
+    line-height: 1.2em;
+}
+
+.card .content .details h2 span {
+    font-size: 0.75em;
+    font-weight: 500;
+    opacity: 0.5;
+}
+
+.card .content .details .data {
+    display: flex!important;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.card .content .details .data h3 {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.2em;
+    font-weight: 600;
+}
+
+.card .content .details .data h3 span {
+    font-size: 0.85em;
+    font-weight: 400;
+    opacity: 0.5;
+}
+
+.card .content .details .actionBtn {
+    display: block !important;
+    justify-content: space-between;
+}
+
+.card .content .details .actionBtn button {
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    font-weight: 500;
+    background: #2fbfef;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/* 弹窗 (background) */
+
+.modal {
+    display: none;
+    /* 默认隐藏 */
+    position: fixed !important;
+    /* 固定定位 */
+    z-index: 1;
+    /* 设置在顶层 */
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+/* 弹窗内容 */
+
+.modal-content {
+    display: block !important;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+
+/* 关闭按钮 */
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
