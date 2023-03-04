@@ -9,6 +9,15 @@
     src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/85648/IBMPlexSansVar-Roman.ttf");
 }
 
+p {
+    line-height: 200%;
+    letter-spacing: 1px
+}
+
+.body_box p {
+    color: #666;
+}
+
 html {
     height: 100%;
     width: 100%;
@@ -278,7 +287,7 @@ nav ul li:nth-child(5):hover~.nav-box {
     cursor: default;
     padding: 1rem;
     border-bottom: 1px solid #eaecef;
-    text-align: right;
+    text-align: left;
     display: block;
 }
 
@@ -325,4 +334,5 @@ nav ul li:nth-child(5):hover~.nav-box {
     transform: translateY(-50vh) translateZ(1px);
     color: #000000;
     font-size: 30px;
+    font-family: "IBM Plex Sans Roman", Times;
 }

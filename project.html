@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <link href="css/igemCSS.css" rel="stylesheet">
-    <script type="text/javascript" src="js/igemJS.js"></script>
+    <script type="text/javascript" src="js/project.js"></script>
 </head>
 
 <body style="opacity: 0;" id="body">
@@ -30,19 +30,59 @@
         <div class="abstract" id="abstract">
             <div class="abstract_box" style="display: block;">
                 <h1>Abstract</h1>
-                asd
+                &nbsp;&nbsp;将木质素成分转化为单一产品是一种很有前景的木质素升级方法。我们计划开发一种有效的生物催化剂，通过整合三个主要反应：羟基化、O-去甲基化和芳基侧链氧化，从木质素成分中选择性地生产没食子酸酯。首先将合理设计的羟化酶系统引入没食子酸盐生物降解途径阻断的R.
+                opacus
+                PD630突变体，使没食子酸盐从其上层途径的原儿茶酸和化合物中积累。然后使用天然和异源O-去甲基化系统，使多种木质素衍生的甲氧基芳烃转化为没食子酸酯。此外，芳基侧链氧化酶参与拓宽底物谱。根据文献，当碱预处理木质素和碱解聚氨纤维爆破（AFEX）木质素分别用作底物时，每克木质素的没食子酸盐产量高达
+                0.407 和 0.630 g。这些结果表明，这种合理开发的生物催化剂使木质素增值过程变得简单高效。
             </div>
         </div>
         <!--主体内容-->
         <div class="mid_shell" id="mid_shell">
-            <div id="body_box" class="body_box" style="display: block;width: 70%;word-break: keep-all;">
-                Main content
-                <h1 id="t1">T1</h1>
-                <img src="picture/1.jpg" width="20%" class="floatImg">asdsdasdddddd ddddddddddddasdsdasddddddddddasdsdas
-                ddddddddddasdsdasddddddddddasdsdasddddd dddddasdsdasdddddddddd
-                <div class="blockImg"><img src="picture/1.jpg" width="20%"></div> ddd
-                <h2 id="t2">T2</h2>
-                • test
+            <div id="body_box" class="body_box" style="display: block;width: 70%;word-break:break-all;">
+                <h1 id="t1">项目研究内容</h1>
+                <p>&nbsp;&nbsp;通过设计并整合羟基化、O-去甲基化和芳基侧链氧化三个模块到阻断没食子酸和原儿茶酸分解途径的R. opacus
+                    PD630突变体中，创造出一个生物催化系统，从而实现由木质素到没食子酸的选择性转化。
+                </p>
+
+                <h1 id="t2">拟采取的技术路线</h1>
+                <h2 id="t3">1.基底生物的构建：</h2>
+                <p>基于其对芳香烃的分解能力，选取乳红球菌PD630（以下简称PD630），敲除其降解原儿茶酸（底物之一）和没食子酸（目标产物）的酶：儿茶酚 2,3-双加氧酶和原儿茶酸 3,4-双加氧酶基因，获得底盘生物
+                </p>
+                <h2 id="t4">2.木质素不同组分的分解体系</h2>
+                <h3>2.1羟基化模块:</h3>
+                <div class="blockImg"><img src="picture_project/1.png"></div>
+                <p>（原儿茶酸羟基化为没食子酸）</p>
+                对PD630中的内源性PobA（黄素依赖性单加氧酶）进行改造，使其 Tyr <sup>201</sup>和Tyr<sup>385</sup>转变为Phe（以下记为pobA **），增强其对原儿茶酸的催化能力。
+                通过可复制质粒pK18mob-PB264，将pobA ** 导入底盘生物，得到PD630-GA1（以下简称GA1）
+                <div class="blockImg"><img src="picture_project/2.png" width="80%"></div>
+                <h3>2.2去甲基化模块的改装:</h3>
+                <h4>a. 单甲氧基芳烃</h4>
+                <div class="blockImg"><img src="picture_project/3.png" width="80%"></div>
+                <p>（香草酸和阿魏酸的去甲氧基和羟基化）</p>
+                PD630中存在AHK27805.1和AHK34193.1两种酶，可以通过Rieske 非血红素铁单加氧酶系统将甲氧基芳烃如香草酸盐转化为原儿茶酸盐，而阿魏酸可以在PD630 中通过辅酶 A 依赖性
+                β-氧化途径转化为香草酸盐，进而进行羟基化。 经检验，该去甲氧基化模块在PD630野生型中即表达活跃，上述GA1模块以香豆酸和阿魏酸为底物时产率分别达到81%和95%。（该模块目前未进行改造）
+                <h4>b. 双甲氧基芳烃</h4>
+                <p>由于上述去甲基化体系对S型木质素残基中双甲氧基芳烃分子效果微弱，引入依赖四氢叶酸的O-去甲基化系统：</p>
+                <div class="blockImg"><img src="picture_project/4.png" width="80%"></div>
+                <p>经检验，这种外源性 O-去甲基化系统对R. opacus PD630中的注射液转化几wwq乎没有影响，四氢叶酸对该体系的催化功能有重要影响，因此继续构建四氢叶酸循环体系以提升转化率。</p>
+                <p>在SYK-6中，四氢叶酸被甲基化，并通过一系列反应再生为H 4叶酸，其中MetF和LigH两种酶对四氢叶酸循环有重要意义，将其引入GA2得到PD630-GA3。</p>
+                <div class="blockImg"><img src="picture_project/5.png" width="80%"></div>
+                <p>（由于剪切位点限制两基因分别位于质粒的两条DNA链）</p>
+                <h3>2.3芳基侧链氧化模块</h3>
+                <p>使用侧链氧化反应将典型的单木质醇丁香醛转化为丁香酸酯，并进一步转化为没食子酸酯醛脱氢酶 DesV 可以将丁香醛氧化成其酸形式，而丁香酸可在2.3涉及</p>
+                <div class="blockImg"><img src="picture_project/6.png" width="80%"></div>
+                <p>的循环途径中最终转化为没石子酸。</p>
+                <h2 id="t5">3.标记基因与自杀模块</h2>
+                <h3>3.1标记基因</h3>
+                <p>采用新霉素抗性基因和卡那霉素抗性基因联合作为标记基因。</p>
+                <h3>3.2自杀模块</h3>
+                <p>整合所有模块，构建质粒并转入目标底盘生物。</p>
+                <h1>项目研究目标和预期成果</h1>
+                <p>如上述，为了实现木质素的分解并获得单一的产物，我们设计了羟基化模块，去甲基化模块和芳香侧链氧化模块以分解碱预处理木质素复杂的芳香组分，其工作原理大致如下:</p>
+                <div class="blockImg"><img src="picture_project/7.png" width="90%"></div>
+                <p>最终的质粒关键基因图谱如下:</p>
+                <div class="blockImg"><img src="picture_project/8.png" width="80%"></div>
+                <p>在我们的期望状态下，不同种类木质素中的多种芳香烃在该多酶催化体系的综合作用下成功转化为单一的没食子酸，其各代谢通路产率均超过80%，有良好的经济效益和环境效益，最终，在利用后可以自杀。</p>
             </div>
             <aside class="aside" id="aside">
                 <!--目录-->
@@ -52,17 +92,22 @@
                             <li>
                                 <h3>Directory</h3>
                             </li>
-                            <li><span id="t1B">to t1</span></li>
-                            <li><span id="t2B">to t2</span></li>
+                            <li><span id="t1B"><b>项目研究内容</b></span></li>
+                            <li><span id="t2B"><b>拟采取的技术路线</b></span></li>
+                            <li><span id="t3B">1.基底生物的构建</span></li>
+                            <li><span id="t4B">2.木质素不同组分的分解体系</span></li>
+                            <li><span id="t5B">3.标记基因与自杀模块&nbsp;&nbsp;</span></li>
                         </ul>
                     </div>
                 </div>
             </aside>
         </div>
 
-        <div class="image" style="background-image: url('picture/prtsStart.jpg');"></div>
+        <div class="image" style="background-image: url('picture/p4.jpg');"></div>
         <div class="overImg">
-            <h1>这里写(标题)大字</h1>
+            <h1 style="color: aliceblue;">
+
+                In the project</h1>
         </div>
         <div class="mid_text">
             <img src="picture/backTitle.png" style="border-radius: 20px;display: block;">
