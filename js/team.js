@@ -31,7 +31,26 @@ window.onload = function() {
     btn3.onclick = () => { modal3.style.display = 'block'; };
     btn4.onclick = () => { modal4.style.display = 'block'; };
     btn5.onclick = () => { modal5.style.display = 'block'; };
-
+    img1 = () => {
+        var tmp = document.getElementById('Modal-1');
+        tmp.style.display = 'block';
+    }
+    img2 = () => {
+        var tmp = document.getElementById('Modal-2');
+        tmp.style.display = 'block';
+    }
+    img3 = () => {
+        var tmp = document.getElementById('Modal-3');
+        tmp.style.display = 'block';
+    }
+    img4 = () => {
+        var tmp = document.getElementById('Modal-4');
+        tmp.style.display = 'block';
+    }
+    img5 = () => {
+        var tmp = document.getElementById('Modal-5');
+        tmp.style.display = 'block';
+    }
     window.onclick = (event) => {
         if (event.target == modal1) {
             modal1.style.display = "none";
