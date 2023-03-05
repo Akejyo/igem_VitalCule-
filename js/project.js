@@ -27,4 +27,7 @@ window.onload = function() {
     document.querySelector("#t5B").onclick = () => {
         document.querySelector("#t5").scrollIntoView(true);
     }
+    document.querySelector("#t6B").onclick = () => {
+        document.querySelector("#t6").scrollIntoView(true);
+    }
 }
